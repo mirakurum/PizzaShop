@@ -5,19 +5,22 @@
     <% @products.each do |p| %>
     <div class="col-md-3">
       <div>
-        <%= p.title %>
+       <b> <%= p.title %> </b>
       </div>
       <div>
         <img src="<%= p.path_to_image %>" height="130">
       </div>
       <div>
-        <%= p.description %>
+        <i><%= p.description %></i>
       </div>
       <div>
         Size <%= p.size %> cm
       </div>
       <div>
         Price <%= p.price %> rub
+      </div>
+      <div>
+        <button class="btn btn-success btn-sm" onclick="addcart()">Add to cart</button>
       </div>
     </div>
     <% end %>
